@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="Home"></item>
+    </group>
+        <item android:title="Profile">
+            <menu>
+                <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/account"
+                    android:title="Profile"></item>
+                <item
+                    android:id="@+id/nav_request"
+                    android:icon="@drawable/request"
+                    android:title="Request to be Teacher"></item>
+                <item
+                    android:id="@+id/nav_view_request"
+                    android:icon="@drawable/view_request"
+                    android:title="View Available requests"></item>
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/logout"
+                    android:title="Logout"></item>
+                </group>
+            </menu>
+        </item>
+    <item
+        android:title="More">
+        <menu>
+            <item
+                android:id="@+id/nav_terms"
+                android:icon="@drawable/terms"
+                android:title="Terms and Condition"></item>
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@drawable/rate"
+                android:title="Rate Us"></item>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/share"
+                android:title="Share"></item>
+        </menu>
+
+    </item>
+
+
+</menu>

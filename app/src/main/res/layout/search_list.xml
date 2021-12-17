@@ -7,18 +7,17 @@
     android:layout_margin="5dp"
     android:orientation="horizontal">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileimage"
-        android:layout_width="210dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:src="@drawable/account"
-        app:srcCompat="@drawable/account"
-        tools:srcCompat="@drawable/account" />
+        app:civ_border_width="1dp"
+        app:civ_border_color="#FF000000"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="vertical">
 
@@ -111,6 +110,10 @@
                 app:srcCompat="@drawable/text"
                 tools:srcCompat="@drawable/text" />
         </LinearLayout>
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#424242"
+            />
     </LinearLayout>
 </LinearLayout>

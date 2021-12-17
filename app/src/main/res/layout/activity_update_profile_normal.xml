@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UpdateProfile">
+    tools:context=".normal.UpdateProfileNormal">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:padding="5dp"
-                android:text="Update Profile"
+                android:text="Profile"
                 android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -106,51 +106,6 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="297dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:padding="5dp"
-                    android:text="Subjects :"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <EditText
-                        android:id="@+id/subject1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:ems="10"
-                        android:hint="Enter main subject"
-                        android:inputType="textPersonName"
-                        android:text="Name" />
-
-                    <EditText
-                        android:id="@+id/subject2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:ems="10"
-                        android:hint="Enter other subject"
-                        android:inputType="textPersonName"
-                        android:text="Name" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp">
-
-                <TextView
                     android:id="@+id/textView10"
                     android:layout_width="134dp"
                     android:layout_height="wrap_content"
@@ -167,6 +122,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_baseline_edit_location"
                     android:ems="10"
                     android:hint="Enter location"
                     android:inputType="textPersonName"
@@ -219,15 +175,6 @@
                     android:text="Update Profile"
                     android:textColor="#FFFFFF" />
 
-                <Button
-                    android:id="@+id/teacherProfile"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:background="#02289A"
-                    android:text="Update as Teacher"
-                    android:textColor="#FFFFFF" />
             </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

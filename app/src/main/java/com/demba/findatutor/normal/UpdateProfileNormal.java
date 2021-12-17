@@ -1,15 +1,15 @@
-package com.demba.findatutor;
+package com.demba.findatutor.normal;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.demba.findatutor.R;
 import com.demba.findatutor.users.users;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -19,7 +19,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class UpdateProfile extends AppCompatActivity {
+public class UpdateProfileNormal extends AppCompatActivity {
     private DatabaseReference reference;
     FirebaseDatabase rootNode;
     FirebaseAuth auth;
@@ -28,12 +28,12 @@ public class UpdateProfile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_profile);
+        setContentView(R.layout.activity_update_profile_normal);
 
         nameG = findViewById(R.id.name);
         genderG= findViewById(R.id.gender);
-        subject1G = findViewById(R.id.subject1);
-        subject2G = findViewById(R.id.subject2);
+//        subject1G = findViewById(R.id.subject1);
+//        subject2G = findViewById(R.id.subject2);
         locationG = findViewById(R.id.location);
         phoneG = findViewById(R.id.phone);
         auth = FirebaseAuth.getInstance();
@@ -65,7 +65,7 @@ public class UpdateProfile extends AppCompatActivity {
             }
         });
         Button normalProfile= findViewById(R.id.normalProfile);
-        Button teacherProfile= findViewById(R.id.teacherProfile);
+//        Button teacherProfile= findViewById(R.id.teacherProfile);
 
         normalProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,32 +85,32 @@ public class UpdateProfile extends AppCompatActivity {
                 reference = rootNode.getReference("users");
                 users usercreate = new users(userId,name,age,gender,subject1,subject2,location,role,profile,phone);
                 reference.child(userId).setValue(usercreate);
-                Toast.makeText(UpdateProfile.this,"Profile updated successfully",Toast.LENGTH_LONG).show();
+                Toast.makeText(UpdateProfileNormal.this,"Profile updated successfully",Toast.LENGTH_LONG).show();
             }
         });
-        teacherProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String userId,name,age,gender,subject1,subject2,location,role,profile,phone;
-                userId = auth.getCurrentUser().getUid();
-                name=nameG.getText().toString();
-                age="";
-                gender=genderG.getText().toString();
-                subject1=subject1G.getText().toString();
-                subject2=subject2G.getText().toString();
-                location=locationG.getText().toString();
-                role="teacher";
-                profile="";
-                phone=phoneG.getText().toString();
-                rootNode = FirebaseDatabase.getInstance();
-                reference = rootNode.getReference("users");
-                users usercreate = new users(userId,name,age,gender,subject1,subject2,location,role,profile,phone);
-                reference.child(userId).setValue(usercreate);
-
-                Toast.makeText(UpdateProfile.this,"Profile updated successfully",Toast.LENGTH_LONG).show();
-
-            }
-        });
+//        teacherProfile.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                String userId,name,age,gender,subject1,subject2,location,role,profile,phone;
+//                userId = auth.getCurrentUser().getUid();
+//                name=nameG.getText().toString();
+//                age="";
+//                gender=genderG.getText().toString();
+//                subject1=subject1G.getText().toString();
+//                subject2=subject2G.getText().toString();
+//                location=locationG.getText().toString();
+//                role="teacher";
+//                profile="";
+//                phone=phoneG.getText().toString();
+//                rootNode = FirebaseDatabase.getInstance();
+//                reference = rootNode.getReference("users");
+//                users usercreate = new users(userId,name,age,gender,subject1,subject2,location,role,profile,phone);
+//                reference.child(userId).setValue(usercreate);
+//
+//                Toast.makeText(UpdateProfileNormal.this,"Profile updated successfully",Toast.LENGTH_LONG).show();
+//
+//            }
+//        });
 
 
 

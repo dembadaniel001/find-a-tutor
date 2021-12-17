@@ -3,6 +3,7 @@
     package="com.demba.findatutor">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -11,17 +12,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UpdateProfile"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".teachers.Terms"></activity>
+        <activity android:name=".teachers.ViewRequests" />
+        <activity android:name=".teachers.RequestTeacher" />
+        <activity android:name=".normal.NormalProfile" />
+        <activity android:name=".teachers.TeacherProfile" />
+        <activity android:name=".normal.UpdateProfileNormal" />
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
     </application>
-
-    <uses-permission
-        android:name="android.permission.CALL_PHONE"></uses-permission>
 
 </manifest>

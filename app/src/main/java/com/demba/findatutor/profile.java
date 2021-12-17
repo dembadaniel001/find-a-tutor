@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.demba.findatutor.normal.UpdateProfileNormal;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -119,7 +120,7 @@ public class profile extends Fragment {
         updateProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(),UpdateProfile.class));
+                startActivity(new Intent(getActivity(), UpdateProfileNormal.class));
             }
         });
         return v;

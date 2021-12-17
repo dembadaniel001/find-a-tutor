@@ -175,35 +175,6 @@ public class search extends Fragment {
         searchList.setAdapter(adapter);
     }
 
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        FirebaseRecyclerOptions options =new FirebaseRecyclerOptions.Builder<users>()
-//                .setQuery(userreference,users.class)
-//                .build();
-//        FirebaseRecyclerAdapter<users, home.usersViewHolder> adapter =
-//                new FirebaseRecyclerAdapter<users, home.usersViewHolder>(options) {
-//                    @Override
-//                    protected void onBindViewHolder(@NonNull final home.usersViewHolder usersViewHolder,
-//                                                    int i, @NonNull users users) {
-//
-//                    }
-//
-//
-//
-//                    @NonNull
-//                    @Override
-//                    public home.usersViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//                        View v = LayoutInflater.from(parent.getContext())
-//                                .inflate(R.layout.search_list, parent, false);
-//                        home.usersViewHolder viewHolder = new home.usersViewHolder(v);
-//                        return viewHolder;
-//                    }
-//                };
-//
-//        adapter.startListening();
-//        searchList.setAdapter(adapter);
-//    }
 
 
     public static class usersViewHolder extends RecyclerView.ViewHolder{
@@ -222,24 +193,4 @@ public class search extends Fragment {
 
         }
     }
-//    public class usersViewHolder extends RecyclerView.ViewHolder{
-//        View view;
-//    public usersViewHolder(@NonNull View itemView) {
-//        super(itemView);
-//        view = itemView;
-//    }
-//    public void setDetails(String nameS, String subject1S, String subject2S,String locationS,String profileimageS){
-//            TextView name = itemView.findViewById(R.id.name);
-//            TextView subject1 = itemView.findViewById(R.id.subject1);
-//            TextView subject2 = itemView.findViewById(R.id.subject2);
-//            TextView location = itemView.findViewById(R.id.location);
-//            ImageView profileimage = itemView.findViewById(R.id.profileimage);
-//
-//            name.setText(nameS);
-//            subject1.setText(subject1S);
-//            subject2.setText(subject2S);
-//            location.setText(locationS);
-//    }
-//
-//}
 }
